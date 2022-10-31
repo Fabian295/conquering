@@ -1,9 +1,11 @@
-.App {
-  text-align: center;
+body {
+  background-color: #282c34;
+  color: #fff;
+  font-family: 'Convergence', sans-serif;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
 }
 
@@ -14,18 +16,68 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #000;
+  max-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
   color: white;
+  border-bottom: 2px solid #61dafb;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  color: #61dafb;
+}
+
+.nav-menu li {
+  margin-right: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hero {
+  width: 90vmin;
+  background-color: rgb(50, 1, 50);
+  padding: 2rem 4rem;
+  margin:2rem auto ;
+  min-height: 40vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hero button {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  background-color: #8020ee;
+  border: 2px solid #fff;
+  color:  #fff;
+  border-radius: 1.5rem;
+  transition: background-color 300ms ease;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #5c15ac;;
+}
+
+.counterDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1.num-title {
+  display: inline-block;
+  font-size: 3rem;
+  color: aqua;
 }
 
 @keyframes App-logo-spin {
