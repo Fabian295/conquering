@@ -17,12 +17,11 @@ let state = store.getState()
 const Hero = () => {
   const increment = (ev) => {
     console.log('increment!')
-    state.counter + 1
+   
 
-     return (
-      store.dispatch({type: 'INCREMENT'}),
-      , console.log(state.counter)
-      )
+     return ({
+      ...state, counter: state.counter
+      })
   }
 
   const decrement = (ev) => {
