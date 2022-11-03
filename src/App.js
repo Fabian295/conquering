@@ -1,7 +1,7 @@
 import Header from './Header';
 import Hero from './Hero';
 import financeManagementStore from './store/financeManagementStore';
-import { addExpense } from './actions/financesActions';
+import { addExpense, addBY, minExpense, minBy, reset } from './actions/financesActions';
 import './App.css';
 
 const store = financeManagementStore()
@@ -11,6 +11,10 @@ store.subscribe(() => {
 })
 
 store.dispatch(addExpense())
+store.dispatch(minExpense())
+store.dispatch(addBY({incBy: 25}))
+store.dispatch(minBy({decBy: 10}))
+store.dispatch(reset())
 
 function App() {
   return (
