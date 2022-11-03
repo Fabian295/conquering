@@ -6,7 +6,7 @@ import './App.css'
 
 /******* DISPATCHING THE ACTION TO THE STORE ***********/
 const store = counterStore();
-console.log(store.getState())
+// console.log(store.getState())
 
 store.dispatch(increment())
 store.dispatch({ type: 'DECREMENT' })
