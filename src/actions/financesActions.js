@@ -1,7 +1,53 @@
-export const addExpense = () => {
+/* eslint-disable no-unused-vars */
+import { v4 as uuidv4 } from 'uuid';
+
+const stateDemo = {
+  expenses:[{
+    id: '123abc456',
+    description: 'Rental Truck',
+    note: 'This is a cyber truck',
+    amount: '50',
+    createdAt: 0
+  }],
+  filters: {
+    keyword: 'rent',
+    sortBy: 'amount',
+    startDate: undefined,
+    endDate: undefined,
+  }
+}
+
+export const addExpense = ({
+  description = '',
+  note = '',
+  amount = '',
+  createdAt = ''
+}) => {
     return {
-      type: 'EXPENSES/ADD'
+      type: 'EXPENSES/ADD',
+      expense: {
+        id: uuidv4(),
+        description,
+        note,
+        amount,
+        createdAt,
+      }
     }
+}
+
+export const removeExpense = ({ id }) => {
+  return {
+    type: 'EXPENSES/REMOVE',
+    id,
+  }
+}
+
+export  const editExpense = ( id, updates ) => {
+  return {
+    type: 'EXPENSES/EDIT',
+    id,
+    updates
+  }
 }
 
 export const addBY = ({incBy = 25} = {}) => {
@@ -30,3 +76,4 @@ export const reset = () => {
   set: 100
   }
 }
+
