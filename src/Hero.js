@@ -40,7 +40,7 @@ store.subscribe(() => {
   console.log(state)
 })
   
-  console.log(store.getState())
+  // console.log(store.getState())
   const add = () => {
     console.log('increment')
     store.dispatch(increment())
