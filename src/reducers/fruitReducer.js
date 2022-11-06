@@ -1,11 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
 
-const fruitDefault = [{
-  fruitName: '',
-  price: '',
-  origin: '',
-  soldBy: ''
-}]
+// const fruitDefault = [{
+//   fruitName: '',
+//   price: '',
+//   origin: '',
+//   soldBy: ''
+// }]
 
 export default function fruitReducer(state = [] , action) {
     switch(action.type) {
@@ -13,7 +13,7 @@ export default function fruitReducer(state = [] , action) {
         return [ 
           ...state,
           // action.fruit,
-         { ...action},
+         action,
         ]
       default:
         return state
